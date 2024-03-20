@@ -1,0 +1,85 @@
+/*---Definindo as fontes---*/
+@font-face {
+    font-family: 'Bree Serif';
+    src: url('../font/Bree_Serif/BreeSerif-Regular.ttf');
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../font/Lato/Lato-Bold.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../font/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf');
+}
+/*---Resetando o documento---*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*---Ajustes---*/
+.clear {
+    clear: both;
+}
+/*---Ajustando a altura---*/
+body, html {
+    height: 100vh;
+}
+/*---Cabeçalho---*/
+header {
+    padding: 70px;
+    background-image: url('../imgs/7.png');
+    background-size: cover;
+    height: 1000px;
+}
+/*---Topo do Cabeçalho---*/
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+.top h1 {
+    font-family: 'Bree Serif';
+    font-weight: normal;
+    padding-top: 0.5%;
+    font-size: 38px;
+    margin-left: 4px;
+    float: right;
+}
+.top a {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F1671A;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #F1671A;
+    height: 55px;
+    border-radius: 3px;
+    width: 10%;
+    transition: 0.7s;
+    padding-top: 16px;
+    text-align: center;
+    color: #fafafa;
+}
+.top a:hover {
+    transform: scale(1.1);
+    background-color: #fafafa;
+    color: #F1671A;
+
+}
+/*---Fundo do Cabeçalho---*/
+.bottom {
+    padding-left: 71px;
+}
+.bottom h1 {
+    font-size: 71px;
+    font-weight: normal;
+    font-family: 'Lato';
+    white-space: pre-line;
+}
+.bottom h2 {
+    font-size: 25.7px;
+    margin-top: -10px;
+    font-family: 'DM Sans';
+    white-space: pre-line;
+}
