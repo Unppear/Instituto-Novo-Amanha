@@ -133,3 +133,46 @@ header {
     background-color: #fafafa;
     color: #F1671A;
 }
+/*---Serviços---*/
+.services {
+    background-image: url('../imgs/9.png');
+    background-size: cover;
+    padding: 150px 140px;
+}
+.services h1 {
+    font-family: 'Lato';
+    font-size: 60px;
+    text-align: center;
+}
+.services .content {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+/*---Single---*/
+.single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    text-align: center;
+    width: 28%;
+    padding: 20px 0;
+    background-color: #fafafa;
+}
+.single img {
+    width: 60%;
+}
+.single h3 {
+    white-space: pre-line;
+    font-family: 'Lato';
+    font-size: 26px;
+}
+.single p {
+    white-space: pre-line;
+    font-size: 20px;
+    margin-top: -20px;
+    color: #76766B;
+    font-family: 'DM Sans';
+}
