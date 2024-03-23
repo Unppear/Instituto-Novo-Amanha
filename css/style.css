@@ -93,21 +93,24 @@ header {
 .img {
     width: 50%;
 }
-.img img {
+.aboutUs img {
     height: 100%;
     width: 100%;
+    border-radius: 5px;
 }
 /*---Informações---*/
 .info {
+    width: 50%;
+}
+.aboutUs .info {
     padding-left: 230px;
     padding-top: 70px;
-    width: 50%;
 }
 .info h1 {
     font-family: 'Lato';
     font-size: 55px;
 }
-.info p {
+.aboutUs .info p {
     margin-top: -25px;
     font-family: 'DM Sans';
     white-space: pre-line;
@@ -175,4 +178,24 @@ header {
     margin-top: -20px;
     color: #76766B;
     font-family: 'DM Sans';
+}
+/*---Seção Filosofia---*/
+.philosophy {
+    display: flex;
+    padding: 150px 120px 130px;
+}
+/*---Container de informações---*/
+.philosophy h1 {
+    white-space: pre-line;
+    font-size: 56px;
+}
+.philosophy .info a {
+    margin-top: 130px;
+    padding: 16px 53px;
+}
+/*---Container da imagem---*/
+.philosophy img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
