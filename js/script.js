@@ -8,6 +8,6 @@ $(window).on('load', function() {
         $('.background_popup').css('display', 'flex');
     });
     $('.close').on('click', () => {
-        $('.background_popup').fadeOut('300', () => {});
+        $('.background_popup').fadeOut('500', () => {});
     })
 });
