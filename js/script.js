@@ -4,6 +4,8 @@
 $(window).on('load', function() {
     /*---Popup---*/ 
     $('#open_contact').on('click', function() {
+        var alturaHtmlBody = $(document).height();
+        $("html, body").animate({scrollTop: `${alturaHtmlBody}`}, 500);
         $('.background_popup').fadeIn('500', () => {});
         $('.background_popup').css('display', 'flex');
     });

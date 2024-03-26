@@ -17,6 +17,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*---Definindo o tamanho---*/
+html, body {
+    height: -webkit-fill-available;
+}
 /*---Popup---*/
 .background_popup {
     display: none;
@@ -317,4 +321,54 @@ header {
 .feedback h2 {
     font-family: 'DM Sans';
     font-size: 22px;
+}
+/*---Contato---*/
+.contact {
+    padding: 80px;
+}
+/*---Ttulos da seção---*/
+.contact h1, .contact h2, .contact h4 {
+    font-family: 'Lato';
+}
+.contact h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-left: 22px;
+}
+/*---Conteudo da seção contato---*/
+.left_content {
+    float: left;
+    width: 45%;
+}
+.right_content {
+    float: right;
+    width: 45%;
+}
+/*---Container individual da seção---*/
+.contact_single:nth-of-type(2) {
+    margin: 20px 0;
+}
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 13px;
+}
+/*---Container inline---*/
+.contact_single span {
+    display: block;
+}
+.contact_single span:nth-of-type(2) {
+    margin-top: 5px;
+}
+.contact h4 {
+    color: #797BE4;
+    font-size: 17px;
+}
+.contact p {
+    font-size: 19px;
+    color: #76766B;
+    white-space: pre-line;
+    font-family: 'DM Sans';
+}
+.left_content .contact_single:not(:nth-of-type(2)) span:first-of-type p, .right_content span:first-of-type p {
+    margin-top: -25px;
 }
