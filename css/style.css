@@ -212,7 +212,7 @@ header {
     font-weight: bold;
     font-size: 21px;
 }
-.info input {
+.info input, .philosophy .info a {
     color: #fafafa;
     background-color: #F1671A;
     margin-top: 30px;
@@ -227,7 +227,7 @@ header {
     font-weight: bold;
     padding: 16px 25px;
 }
-.info input:hover {
+.info input:hover, .philosophy .info a:hover {
     transform: scale(1.05);
     background-color: #fafafa;
     color: #F1671A;
@@ -236,7 +236,6 @@ header {
 .services {
     background-image: url('../imgs/9.png');
     background-size: cover;
-    height: -webkit-fill-available;
     padding: 150px 140px;
 }
 .services h1 {
@@ -433,7 +432,7 @@ header {
     .top a {
         font-size: 16px;
         height: 50px;
-        width: 45%;
+        width: 42%;
         margin-top: 50px;
         padding-top: 12px;
         position: relative;
@@ -450,12 +449,12 @@ header {
     }
     .bottom h1 {
         white-space: normal;
-        font-size: 68px;
+        font-size: 50px;
         margin-top: 30px;
     }
     .bottom h2 {
-        font-size: 24px;
-        margin-top: 24px;
+        font-size: 18px;
+        margin-top: 30px;
         white-space: normal;
     }
     /*---Seção sobre nós---*/
@@ -478,27 +477,67 @@ header {
     .aboutUs .info {
         padding: 20px;
     }
-    .info h1 {
+    .aboutUs .info h1 {
         font-size: 50px;
     }
     .aboutUs .info p {
         margin-top: 5px;
         white-space: normal;
-        font-size: 20px;
+        font-size: 18px;
     }
     .info input {
         margin-top: 22px;
-        font-size: 18px;
+        font-size: 16px;
         padding: 14px 21px;
     }
     /*---Serviços---*/
     .services {
         padding: 20px;
     }
+    .services h1 {
+        font-size: 50px;
+    }
     .services .content {
-        margin-top: 90px;
+        margin-top: 60px;
         flex-direction: column;
-        justify-content: normal;
+        justify-content: center;
+        align-items: center;
+    }
+    .services .single {
+        width: 100%;
+    }
+    .services .single:nth-of-type(2) {
+        margin: 30px 0;
+    }
+    .services .single h3 {
+        font-size: 24px;
+    }
+    .services .single:nth-of-type(3) h3 {
+        margin-top: -15px;
+    }
+    .services .single p {
+        font-size: 17px;
+        margin-top: -15px;
+    }
+    /*---Seção Filosofia---*/
+    .philosophy {
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .philosophy .info, .philosophy .img {
+        width: 100%;
+    }
+    .philosophy .info {
+        padding-top: 60px;
+        margin-bottom: 70px;
+    }
+    .philosophy .info h1 {
+        font-size: 39px;    
+        white-space: normal;
+    }
+    .philosophy .info a {
+        margin-top: 40px;
+        padding: 16px 40px;
     }
     /*---Feedback---*/
     .feedback {
@@ -506,8 +545,5 @@ header {
         flex-direction: column;
         padding: 20px;
     }
-    /*---Seção Filosofia---*/
-    .philosophy {
-        padding: 30px 0 30px;
-    }
+    
 }
