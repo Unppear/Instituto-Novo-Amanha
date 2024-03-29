@@ -105,8 +105,9 @@ html, body {
 }
 .close i {
     position: relative;
-    top: 24.2%;
-    left: 24.2%;
+    top: 25.2%;
+    left: 44.2%;
+    transform: translate(-44.2%, -25.2%);
 }
 .close:hover {
     transform: scale(1.1);
@@ -114,7 +115,9 @@ html, body {
     color: #f1671a;
 }
 .close:hover i {
-    left: 23.2%;
+    top: 24.2%;
+    left: 47.2%;
+    transform: translate(-47.2%,-24.2%);
 }
 /*---Ajustes---*/
 .clear {
@@ -299,7 +302,8 @@ header {
 .feedback {
     display: flex;
     justify-content: space-between;
-    padding: 170px 150px;
+    align-items: center;
+    padding-left: 150px;
     background-image: url('../imgs/11.png');
     background-size: cover;
     height: -webkit-fill-available;
@@ -307,16 +311,18 @@ header {
 /*---Conteudo---*/
 .feedback .content {
     width: 50%;
-    padding-left: 150px;
+    padding-top: 160px;
+    height: 100%;
 }
 .feedback h1 {
     white-space: pre-line;
     font-size: 70px;
+    margin-top: -100px;
     font-family: 'Lato';
 }
 /*---Individual---*/
 .feedback .single {
-    padding-bottom: 35%;
+    height: calc(100% / 3);
 }
 .feedback h2 {
     font-family: 'DM Sans';
@@ -402,12 +408,8 @@ header {
         right: -4%;
     }
     .close i {
-        top: 23.5%;
-        left: 23.5%;
-    }
-    .close:hover i {
-        top: 25%;
-        left: 24.5%;
+        left: 47%;
+        transform: translate(-47%, -25.2%);
     }
     /*---Cabeçalho---*/
     header {
@@ -488,7 +490,7 @@ header {
     .info input {
         margin-top: 22px;
         font-size: 16px;
-        padding: 14px 21px;
+        padding: 12px 18px;
     }
     /*---Serviços---*/
     .services {
@@ -521,7 +523,7 @@ header {
     }
     /*---Seção Filosofia---*/
     .philosophy {
-        padding: 20px;
+        padding: 20px 20px 50px;
         flex-wrap: wrap;
     }
     .philosophy .info, .philosophy .img {
@@ -537,7 +539,8 @@ header {
     }
     .philosophy .info a {
         margin-top: 40px;
-        padding: 16px 40px;
+        font-size: 16px;
+        padding: 12px 32px;
     }
     /*---Feedback---*/
     .feedback {
@@ -545,5 +548,19 @@ header {
         flex-direction: column;
         padding: 20px;
     }
-    
+    .feedback h1 {
+        font-size: 50px;
+        margin-top: 0;
+    }
+    .feedback .content {
+        width: 100%;
+        padding-top: 100px;
+    }
+    .feedback h2 {
+        font-size: 20px;
+    }
+    /*---Contato---*/
+    .contact {
+        padding: 40px 20px 20px;
+    }
 }
