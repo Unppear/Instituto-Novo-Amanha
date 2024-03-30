@@ -215,7 +215,7 @@ header {
     font-weight: bold;
     font-size: 21px;
 }
-.info input, .philosophy .info a {
+.info input, .philosophy .info a, .box_link a {
     color: #fafafa;
     background-color: #F1671A;
     margin-top: 30px;
@@ -230,7 +230,7 @@ header {
     font-weight: bold;
     padding: 16px 25px;
 }
-.info input:hover, .philosophy .info a:hover {
+.info input:hover, .philosophy .info a:hover, .box_link a:hover {
     transform: scale(1.05);
     background-color: #fafafa;
     color: #F1671A;
@@ -254,6 +254,7 @@ header {
 /*---Single---*/
 .services .single {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -262,6 +263,20 @@ header {
     width: 28%;
     padding: 20px 0;
     background-color: #fafafa;
+}
+/*---Container com o link---*/
+.services .box_link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.box_link a {
+    padding: 13px 25px;
 }
 .single img {
     width: 60%;
@@ -562,5 +577,20 @@ header {
     /*---Contato---*/
     .contact {
         padding: 40px 20px 20px;
+    }
+    .contact h1 {
+        margin-left: 61px;
+    }
+    .contact h2 {
+        font-size: 28px;
+    }
+    .left_content, .right_content {
+        width: 46%;
+    }
+    .contact p {
+        white-space: normal;
+    }
+    .left_content .contact_single:not(:nth-of-type(2)) span:first-of-type p, .right_content span:first-of-type p {
+        margin-top: 0;
     }
 }

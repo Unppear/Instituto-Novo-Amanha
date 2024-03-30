@@ -3,6 +3,8 @@
 /*---Função prime---*/
 $(window).on('load', function() {
     /*---Popup---*/ 
+    var popupBackground = $('.background_popup');
+
     $('#open_contact').on('click', function() {
         /*
             Codigo para mover descer ou subir a tela
@@ -10,10 +12,37 @@ $(window).on('load', function() {
             var alturaHtmlBody = $(document).height();
             $("html, body").animate({scrollTop: `${alturaHtmlBody}`}, 500);
         */
-        $('.background_popup').fadeIn('500', () => {});
-        $('.background_popup').css('display', 'flex');
+        popupBackground.fadeIn('500', () => {});
+        popupBackground.css('display', 'flex');
     });
     $('.close').on('click', () => {
-        $('.background_popup').fadeOut('500', () => {});
+        popupBackground.fadeOut('500', () => {});
     })
+    /*---Container escondido---*/
+    var singOne = $('.one'), singTwo = $('.two'), singThree = $('.three');
+    var boxLinkOne = $('.one .box_link'), boxLinkTwo = $('.two .box_link'), boxlinkThree = $('.three .box_link');
+
+    singOne.on('mouseenter', () => {
+        boxLinkOne.fadeIn();
+        boxLinkOne.css('display', 'flex');
+    });
+    singOne.on('mouseleave', () => {
+        boxLinkOne.fadeOut();
+    });
+
+    singTwo.on('mouseenter', () => {
+        boxLinkTwo.fadeIn();
+        boxLinkTwo.css('display', 'flex');
+    });
+    singTwo.on('mouseleave', () => {
+        boxLinkTwo.fadeOut();
+    });
+
+    singThree.on('mouseenter', () => {
+        boxlinkThree.fadeIn();
+        boxlinkThree.css('display', 'flex');
+    });
+    singThree.on('mouseleave', () => {
+        boxlinkThree.fadeOut();
+    });
 });
