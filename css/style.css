@@ -92,10 +92,11 @@ html, body {
 /*---Icone de fechar---*/
 .close {
     position: absolute;
-    top: -7%;
+    top: -6%;
     cursor: pointer;
     right: -2.5%;
     width: 30px;
+    padding: 6.8px 0 0 6.09px;
     height: 30px;
     transition: 0.7s;
     color: #fafafa;
@@ -103,21 +104,10 @@ html, body {
     background-color: #f1671a;
     border-radius: 20px;
 }
-.close i {
-    position: relative;
-    top: 25.2%;
-    left: 44.2%;
-    transform: translate(-44.2%, -25.2%);
-}
 .close:hover {
     transform: scale(1.1);
     background-color: #fafafa;
     color: #f1671a;
-}
-.close:hover i {
-    top: 24.2%;
-    left: 47.2%;
-    transform: translate(-47.2%,-24.2%);
 }
 /*---Ajustes---*/
 .clear {
@@ -419,12 +409,12 @@ header {
     }
     /*---Icone de fechar---*/
     .close {
-        top: -10%;
+        top: -9%;
         right: -4%;
+        padding: 6.5px 0 0 6.1px;
     }
-    .close i {
-        left: 47%;
-        transform: translate(-47%, -25.2%);
+    .close:hover {
+        padding: 7.25px 0 0 6.2px;
     }
     /*---Cabeçalho---*/
     header {
