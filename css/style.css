@@ -11,6 +11,10 @@
     font-family: 'DM Sans';
     src: url('../font/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf');
 }
+@font-face {
+    font-family: 'Nunito';
+    src: url('../font/Nunito/Nunito-VariableFont_wght.ttf');
+}
 /*---Resetando o documento---*/
 * {
     padding: 0;
@@ -96,7 +100,7 @@ html, body {
     cursor: pointer;
     right: -2.5%;
     width: 30px;
-    padding: 6.8px 0 0 6.09px;
+    padding: 0.33% 0 0 1.13%;
     height: 30px;
     transition: 0.7s;
     color: #fafafa;
@@ -108,6 +112,11 @@ html, body {
     transform: scale(1.1);
     background-color: #fafafa;
     color: #f1671a;
+    padding-left: 1.2%;
+}
+.close strong {
+    font-size: 18px;
+    font-family: 'Nunito';
 }
 /*---Ajustes---*/
 .clear {
@@ -411,10 +420,11 @@ header {
     .close {
         top: -9%;
         right: -4%;
-        padding: 6.5px 0 0 6.1px;
+        padding-left: 2.1%;
     }
     .close:hover {
-        padding: 7.25px 0 0 6.2px;
+        padding-top: 0.5%;
+        padding-left: 2.15%;
     }
     /*---Cabeçalho---*/
     header {
@@ -582,5 +592,27 @@ header {
     }
     .left_content .contact_single:not(:nth-of-type(2)) span:first-of-type p, .right_content span:first-of-type p {
         margin-top: 0;
+    }
+}
+/*---Responsivo: tablet---*/
+@media screen and (min-width: 601px) and (max-width: 1336px) {
+    /*---Cabeçalho---*/
+    header {
+        padding: 25px;
+    }
+    /*---Topo do cabeçalho---*/
+    .top img {
+        width: 14%;
+    }
+    .top h1 {
+        padding-top: 2%;
+        font-size: 21px;
+        margin-left: -10px;
+    }
+    .top a {
+        font-size: 16px;
+        height: 48px;
+        width: 25%;
+        padding-top: 11.5px;
     }
 }
