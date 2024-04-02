@@ -596,6 +596,39 @@ header {
 }
 /*---Responsivo: tablet---*/
 @media screen and (min-width: 601px) and (max-width: 1336px) {
+    /*---Popup---*/
+    .content_popup {
+        width: 93%;
+        padding: 30px;
+    }
+    .content_popup h2 {
+        font-size: 26px;
+        text-align: left;
+        margin-bottom: 13px;
+    }
+    .contacts_popup {
+        padding-left: 0;
+    }
+    .contacts_popup span:last-of-type {
+        margin-top: 10px;   
+    }
+    .contacts_popup img {
+        width: 25px;
+        height: 25px;
+    }
+    .contacts_popup p {
+        font-size: 15px;
+    }
+    /*---Icone de fechar---*/
+    .close {
+        top: -7%;
+        right: -2%;
+        padding-top: -0.1%;
+        padding-left: 1.2%;
+    }
+    .close:hover {
+        padding-left: 1.25%;
+    }
     /*---Cabeçalho---*/
     header {
         padding: 25px;
@@ -611,8 +644,148 @@ header {
     }
     .top a {
         font-size: 16px;
-        height: 48px;
-        width: 25%;
-        padding-top: 11.5px;
+        height: 49px;
+        padding: 12px 45px;
+    }
+    /*---Fundo do Cabeçalho---*/
+    .bottom {
+        padding-left: 0;
+        text-align: center;
+    }
+    .bottom h1 {
+        font-size: 55px;
+        margin-top: 30px;
+    }
+    .bottom h2 {
+        font-size: 20px;
+        margin-top: 30px;
+        white-space: normal;
+    }
+    /*---Seção sobre nós---*/
+    .aboutUs {
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 60px 0;
+    }
+    /*---Container da imagem---*/
+    .aboutUs .img {
+        width: 100%;
+    }
+    .aboutUs img {
+        border-radius: 0;
+    }
+    /*---Informações---*/
+    .aboutUs .info {
+        width: 100%;
+    }
+    .aboutUs .info {
+        padding: 20px;
+    }
+    .aboutUs .info h1 {
+        font-size: 55px;
+    }
+    .aboutUs .info p {
+        margin-top: 5px;
+        white-space: normal;
+        font-size: 18px;
+    }
+    .info input {
+        margin-top: 22px;
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+    /*---Serviços---*/
+    .services {
+        padding: 60px 20px;
+    }
+    .services h1 {
+        font-size: 55px;
+    }
+    .services .content {
+        margin-top: 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .services .single {
+        width: 100%;
+    }
+    .services .single:nth-of-type(2) {
+        margin: 30px 0;
+    }
+    .services .single img {
+        width: 45%;
+    }
+    .services .single h3 {
+        font-size: 25px;
+    }
+    .services .single:nth-of-type(3) h3 {
+        margin-top: -25px;
+    }
+    .services .single p {
+        font-size: 18px;
+        margin-top: -10px;
+    }
+    /*---Seção Filosofia---*/
+    .philosophy {
+        padding: 20px 20px 80px;
+        flex-wrap: wrap;
+    }
+    .philosophy .info, .philosophy .img {
+        width: 100%;
+    }
+    .philosophy .info {
+        padding-top: 60px;
+        margin-bottom: 70px;
+    }
+    .philosophy .info h1 {
+        font-size: 45px;    
+        white-space: normal;
+    }
+    .philosophy .info a {
+        margin-top: 40px;
+        font-size: 16px;
+        padding: 12px 45px;
+    }
+    /*---Feedback---*/
+    .feedback {
+        justify-content: normal;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .feedback h1 {
+        font-size: 55px;
+        margin-top: -20px;
+    }
+    .feedback .content {
+        width: 100%;
+        padding-top: 80px;
+    }
+    .feedback h2 {
+        font-size: 25px;
+    }
+    /*---Contato---*/
+    .contact {
+        padding: 50px 20px 30px;
+    }
+    .contact h1 {
+        font-size: 47px;
+        text-align: center;
+    }
+    .contact h2 {
+        font-size: 27px;
+    }
+    .contact h4 {
+        font-size: 16px;
+    }
+    .left_content, .right_content {
+        width: 48%;
+    }
+    .contact p {
+        font-size: 18px;
+        white-space: normal;
+    }
+    .left_content .contact_single:not(:nth-of-type(2)) span:first-of-type p, .right_content span:first-of-type p {
+        margin-top: 0;
     }
 }
