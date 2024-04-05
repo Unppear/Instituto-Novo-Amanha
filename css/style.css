@@ -99,9 +99,12 @@ html, body {
     top: -6%;
     cursor: pointer;
     right: -2.5%;
-    width: 30px;
-    padding: 0.33% 0 0 1.13%;
-    height: 30px;
+    width: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 31px;
     transition: 0.7s;
     color: #fafafa;
     border: 2px solid #f1671a;
@@ -112,10 +115,9 @@ html, body {
     transform: scale(1.1);
     background-color: #fafafa;
     color: #f1671a;
-    padding-left: 1.2%;
 }
 .close strong {
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Nunito';
 }
 /*---Ajustes---*/
@@ -623,11 +625,6 @@ header {
     .close {
         top: -7%;
         right: -2%;
-        padding-top: -0.1%;
-        padding-left: 1.2%;
-    }
-    .close:hover {
-        padding-left: 1.25%;
     }
     /*---Cabeçalho---*/
     header {
@@ -645,7 +642,8 @@ header {
     .top a {
         font-size: 16px;
         height: 49px;
-        padding: 12px 45px;
+        padding-top: 12px;
+        width: 180px;
     }
     /*---Fundo do Cabeçalho---*/
     .bottom {
@@ -714,7 +712,7 @@ header {
         margin: 30px 0;
     }
     .services .single img {
-        width: 45%;
+        width: 35%;
     }
     .services .single h3 {
         font-size: 25px;
@@ -787,5 +785,11 @@ header {
     }
     .left_content .contact_single:not(:nth-of-type(2)) span:first-of-type p, .right_content span:first-of-type p {
         margin-top: 0;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1336px) {
+    /*---Icone de fechar---*/
+    .close {
+        right: -1.2%;
     }
 }
