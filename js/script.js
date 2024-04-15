@@ -19,8 +19,8 @@ $(window).on('load', function() {
         popupBackground.fadeOut('500', () => {});
     })
     /*---Container escondido---*/
-    var singOne = $('.one'), singTwo = $('.two'), singThree = $('.three');
-    var boxLinkOne = $('.one .box_link'), boxLinkTwo = $('.two .box_link'), boxlinkThree = $('.three .box_link');
+    var singOne = $('.one'), singTwo = $('.two'), singThree = $('.three'), 
+        boxLinkOne = $('.one .box_link'), boxLinkTwo = $('.two .box_link'), boxlinkThree = $('.three .box_link');
 
     singOne.on('mouseenter', () => {
         boxLinkOne.fadeIn();
@@ -44,5 +44,15 @@ $(window).on('load', function() {
     });
     singThree.on('mouseleave', () => {
         boxlinkThree.fadeOut();
+    });
+    /*---Card---*/
+    var card_background = $('.background_card'), open_centroPop = $('#open_centroPop'), card_centroPop = $('.centroPop_card');
+
+    open_centroPop.on('click', () => {
+        card_background.fadeIn('500', () => {});
+        card_background.css('display', 'flex');
+
+        card_centroPop.fadeIn('500', () => {});
+        card_centroPop.css('display', 'grid');
     });
 });

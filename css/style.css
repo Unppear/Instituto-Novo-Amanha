@@ -125,51 +125,96 @@ html, body {
     background-image: url('../imgs/backgroundCard_centroPop.png');
     background-size: cover;
     background-position: center;
-    width: 65%;
-    display: grid;
-    grid-template-areas:
-        'esquerda esquerda direita'
-        'esquerda esquerda direita'
-        'rodape rodape rodape'
-    ;
+    border-radius: 5px;
+    display: none;
+    grid-template-areas: 
+        'esquerda direita'
+        'rodape rodape';
+        grid-template-columns: 77% 23%;
+    width: 60%;
 }
 .content_card {
     grid-area: esquerda;
 }
 .content_card header {
     display: flex;
+    padding: 25px 0 0 25px;
 }
 .content_card header img {
-    width: 16%;
+    width: 17%;
 }
 .content_card header h1 {
     white-space: pre-line;
     font-family: 'Lato';
-    margin-top: -22px;
+    margin-top: -23px;
     margin-left: 10px;
     font-size: 33px;
 }
+.content_card p {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 60px;
+    text-align: center;
+    width: 85%;
+    font-family: 'Lato';
+    
+}
 .img_card {
-    display: flex;
     grid-area: direita;
-    align-items: center;
-    flex-direction: column;
 }
 .img_card div {
-    width: 70%;
-    background-color: #fafafa;
+    position: absolute;
+    background-color: #f2f1eb;
     padding: 10px 10px 50px;
     border-radius: 3px;
+    border: 1px solid #a29e9a;
+    width: 11%;
+}
+.img_card div:nth-of-type(1) {
+    top: 21.3%;
+    right: 26.3%;
 }
 .img_card div:nth-of-type(2) {
-    margin: 20px 0;
+    top: 39.7%;
+    right: 21%;
+}
+.img_card div:nth-of-type(3) {
+    top: 59.5%;
+    right: 25.9%;
 }
 .img_card img {
     width: 100%;
+    border: 0.5px solid #dfe2de;
+    border-radius: 3px;
     height: 160px;
 }
-footer {
+/*---Rodape do card centro pop---*/
+.centroPop_card footer {
+    padding: 0 15px 15px;
     grid-area: rodape;
+}
+.centroPop_card footer div {
+    width: 50%;
+    position: relative;
+    top: 30%;
+}
+.centroPop_card footer div:nth-of-type(2) {
+    margin-top: 4px;
+}
+.centroPop_card footer h3 {
+    font-family: 'Lato';
+    font-size: 25px;
+    position: relative;
+    top: 20%;
+}
+.centroPop_card footer p {
+    font-family: 'Bree Serif';
+    font-size: 20px;
+}
+.centroPop_card footer img {
+    float: right;
+    display: block;
+    width: 5%;
 }
 /*---Ajustes---*/
 .clear {
@@ -215,7 +260,6 @@ body > header {
     transform: scale(1.1);
     background-color: #fafafa;
     color: #F1671A;
-
 }
 /*---Fundo do Cabeçalho---*/
 .bottom {
@@ -267,7 +311,7 @@ body > header {
     font-weight: bold;
     font-size: 21px;
 }
-.info input, .philosophy .info a, .box_link a {
+.info input, .philosophy .info a, .box_link input {
     color: #fafafa;
     background-color: #F1671A;
     margin-top: 30px;
@@ -282,7 +326,7 @@ body > header {
     font-weight: bold;
     padding: 16px 25px;
 }
-.info input:hover, .philosophy .info a:hover, .box_link a:hover {
+.info input:hover, .philosophy .info a:hover, .box_link input:hover {
     transform: scale(1.05);
     background-color: #fafafa;
     color: #F1671A;
@@ -327,7 +371,7 @@ body > header {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.box_link a {
+.box_link input {
     padding: 13px 25px;
 }
 .single img {
