@@ -120,7 +120,7 @@ html, body {
     font-size: 15px;
     font-family: 'Nunito';
 }
-/*---Card: Centro POP---*/
+/*---Cards---*/
 .centroPop_card, .cras_card, .creas_card {
     background-image: url('../imgs/backgroundCard_centroPop.png');
     background-size: cover;
@@ -257,13 +257,19 @@ body > header {
     display: flex;
     justify-content: space-between;
 }
+.top span {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.top img {
+    width: 6.5%;
+}
 .top h1 {
     font-family: 'Bree Serif';
     font-weight: normal;
-    padding-top: 0.5%;
+    padding-top: 0.9%;
     font-size: 38px;
-    margin-left: 4px;
-    float: right;
+    margin-left: 10px;
 }
 .top a {
     display: inline-block;
@@ -548,8 +554,99 @@ body > header {
         padding-top: 0.5%;
         padding-left: 2.15%;
     }
+    /*---Cards---*/
+    .centroPop_card, .cras_card, .creas_card {
+        width: 90%;
+        flex-direction: column;
+    }
+    /*---Botao de fechar---*/
+    .centroPop_card .close, .cras_card .close, .creas_card .close {
+        top: 13.3%;
+        width: 36px;
+        height: 36px;
+        right: 19.3%;
+    }
+    .cras_card .close {
+        top: 12.3%;
+    }
+    .creas_card .close {
+        top: 10.5%;
+    }
+    .centroPop_card .close strong, .cras_card .close strong, .creas_card .close strong {
+        font-size: 18.5px;
+    }
+    .content_card {
+        width: 100%;
+    }
+    .content_card header {
+        display: flex;
+        padding: 0;
+    }
+    .content_card header img {
+        width: 10%;
+    }
+    .content_card header h1 {
+        white-space: normal;
+        margin-top: 0;
+        margin-left: 10px;
+        font-size: 25px;
+    }
+    .cras_card header h1 {
+        margin-top: 10px;
+    }
+    .creas_card header h1 {
+        margin-top: -10px;
+    }
+    .content_card p {
+        font-size: 20px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .img_card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img_card div {
+        position: static;
+        padding: 10px 10px 50px;
+        width: 60%;
+        margin-top: 10px;
+    }
+    .img_card img {
+        width: 100%;
+        height: 130px;
+    }
+    /*---Rodape do card centro pop---*/
+    .centroPop_card footer, .cras_card footer, .creas_card footer {
+        padding: 0 15px 15px;
+        width: 100%;
+    }
+    .centroPop_card footer div, .cras_card footer div, .creas_card footer div {
+        width: 50%;
+        position: static;
+    }
+    .centroPop_card footer div:nth-of-type(2), .cras_card footer div:nth-of-type(2), .creas_card footer div:nth-of-type(2) {
+        margin-top: 4px;
+    }
+    .centroPop_card footer h3, .cras_card footer h3, .creas_card footer h3 {
+        font-family: 'Lato';
+        font-size: 25px;
+        position: relative;
+        top: 20%;
+    }
+    .centroPop_card footer p, .cras_card footer p, .creas_card footer p {
+        font-family: 'Bree Serif';
+        font-size: 20px;
+    }
+    .centroPop_card footer img, .cras_card footer img, .creas_card footer img {
+        float: right;
+        display: block;
+        width: 5%;
+    }
     /*---Cabeçalho---*/
-    header {
+    body > header {
         padding: 20px;
     }
     /*---Topo do cabeçalho---*/
@@ -557,11 +654,11 @@ body > header {
         display: block;
     }
     .top span {
-        display: inline-block;
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
     .top img {
         width: 14%;
-        float: left;
     }
     .top h1 {
         padding-top: 2%;

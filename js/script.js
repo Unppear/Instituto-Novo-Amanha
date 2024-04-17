@@ -56,7 +56,11 @@ $(window).on('load', function() {
         card_background.css('display', 'flex');
 
         card_centroPop.fadeIn('500', () => {});
-        card_centroPop.css('display', 'grid');
+        if($(window).width() < 600) {
+            card_centroPop.css('display', 'flex');    
+        } else {
+            card_centroPop.css('display', 'grid');
+        };
     });
 
     close_centroPop.on('click', () => {
@@ -70,7 +74,11 @@ $(window).on('load', function() {
         card_background.css('display', 'flex');
 
         cras_card.fadeIn('500', () => {});
-        cras_card.css('display', 'grid');
+        if($(window).width() < 600) {
+            cras_card.css('display', 'flex');    
+        } else {
+            cras_card.css('display', 'grid');
+        };
     });
 
     close_cras.on('click', () => {
@@ -84,7 +92,11 @@ $(window).on('load', function() {
         card_background.css('display', 'flex');
 
         card_creas.fadeIn('500', () => {});
-        card_creas.css('display', 'grid');
+        if($(window).width() < 600) {
+            card_creas.css('display', 'flex');    
+        } else {
+            card_creas.css('display', 'grid');
+        };
     });
 
     close_creas.on('click', () => {
