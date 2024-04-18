@@ -577,19 +577,23 @@ body > header {
     }
     .content_card {
         width: 100%;
+        padding: 0 8px;
     }
     .content_card header {
         display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
         padding: 0;
     }
     .content_card header img {
-        width: 10%;
+        width: 50%;
+        margin-bottom: 10px;
     }
     .content_card header h1 {
         white-space: normal;
-        margin-top: 0;
-        margin-left: 10px;
-        font-size: 25px;
+        margin: 0;
+        font-size: 21px;
     }
     .cras_card header h1 {
         margin-top: 10px;
@@ -598,9 +602,12 @@ body > header {
         margin-top: -10px;
     }
     .content_card p {
-        font-size: 20px;
-        margin-top: 20px;
+        font-size: 17px;
+        margin-top: 10px;
         width: 100%;
+    }
+    .content_card p br {
+        display: none;
     }
     .img_card {
         width: 100%;
@@ -620,15 +627,16 @@ body > header {
     }
     /*---Rodape do card centro pop---*/
     .centroPop_card footer, .cras_card footer, .creas_card footer {
-        padding: 0 15px 15px;
+        padding: 0;
+        text-align: center;
         width: 100%;
     }
     .centroPop_card footer div, .cras_card footer div, .creas_card footer div {
-        width: 50%;
+        width: 100%;
         position: static;
     }
-    .centroPop_card footer div:nth-of-type(2), .cras_card footer div:nth-of-type(2), .creas_card footer div:nth-of-type(2) {
-        margin-top: 4px;
+    .centroPop_card footer div:nth-of-type(1), .cras_card footer div:nth-of-type(1), .creas_card footer div:nth-of-type(1) {
+        margin: 10px 0;
     }
     .centroPop_card footer h3, .cras_card footer h3, .creas_card footer h3 {
         font-family: 'Lato';
@@ -641,9 +649,12 @@ body > header {
         font-size: 20px;
     }
     .centroPop_card footer img, .cras_card footer img, .creas_card footer img {
-        float: right;
-        display: block;
-        width: 5%;
+        float: none;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20%;
+        margin: 10px 0;
     }
     /*---Cabeçalho---*/
     body > header {
