@@ -132,6 +132,7 @@ html, body {
         'rodape rodape';
         grid-template-columns: 77% 23%;
     width: 60%;
+    position: relative;
 }
 .cras_card {
     background-image: url('../imgs/background_cras.png');
@@ -564,10 +565,10 @@ body > header {
     }
     /*---Botao de fechar---*/
     .centroPop_card .close, .cras_card .close, .creas_card .close {
-        top: 35.65%;
+        top: -1.1%;
         right: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, 1.1%);
     }
     .cras_card .close {
         top: 35.58%;
