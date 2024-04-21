@@ -48,12 +48,12 @@ $(window).on('load', function() {
     /*---Card---*/
     var card_background = $('.background_card'), close_centroPop = $('#close_centroPop'), open_centroPop = $('#open_centroPop'), card_centroPop = $('.centroPop_card'), 
     open_cras = $('#open_cras'), cras_card = $('.cras_card'), close_cras = $('#close_cras'), open_creas = $('#open_creas'), card_creas = $('.creas_card'), 
-    close_creas = $('#close_creas');
+    close_creas = $('#close_creas'), alturaDoc = $(document).height();
 
     /*--Centro Pop---*/
     open_centroPop.on('click', () => {
         card_background.fadeIn('500', () => {});
-        card_background.css('display', 'flex');
+        card_background.css('display', 'flex').css('height', alturaDoc);
 
         card_centroPop.fadeIn('500', () => {});
         if($(window).width() < 600) {
@@ -71,7 +71,7 @@ $(window).on('load', function() {
     /*--Cras---*/
     open_cras.on('click', () => {
         card_background.fadeIn('500', () => {});
-        card_background.css('display', 'flex');
+        card_background.css('display', 'flex').css('height', alturaDoc);
 
         cras_card.fadeIn('500', () => {});
         if($(window).width() < 600) {
@@ -89,7 +89,7 @@ $(window).on('load', function() {
     /*---Creas---*/
     open_creas.on('click', () => {
         card_background.fadeIn('500', () => {});
-        card_background.css('display', 'flex');
+        card_background.css('display', 'flex').css('height', alturaDoc);
 
         card_creas.fadeIn('500', () => {});
         if($(window).width() < 600) {

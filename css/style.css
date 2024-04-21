@@ -117,7 +117,7 @@ html, body {
     color: #f1671a;
 }
 .close strong {
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Nunito';
 }
 /*---Cards---*/
@@ -522,6 +522,10 @@ body > header {
 }
 /*---Responsivo: mobile---*/
 @media screen and (max-width:600px) {
+    /*---Documento---*/
+    html, body {
+        position: relative;
+    }
     /*---Popup---*/
     .content_popup {
         width: 90%;
@@ -545,35 +549,34 @@ body > header {
         font-size: 14px;
     }
     /*---Icone de fechar---*/
-    .close {
+    .background_popup .close {
         top: -9%;
         right: -4%;
-        padding-left: 2.1%;
-    }
-    .close:hover {
-        padding-top: 0.5%;
-        padding-left: 2.15%;
     }
     /*---Cards---*/
+    .background_card {
+        position: absolute;
+    }
     .centroPop_card, .cras_card, .creas_card {
-        width: 90%;
+        width: 95%;
+        padding: 30px 0;
         flex-direction: column;
     }
     /*---Botao de fechar---*/
     .centroPop_card .close, .cras_card .close, .creas_card .close {
-        top: 13.3%;
-        width: 36px;
-        height: 36px;
-        right: 19.3%;
+        top: 35.65%;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .cras_card .close {
-        top: 12.3%;
+        top: 35.58%;
     }
     .creas_card .close {
-        top: 10.5%;
+        top: 36.9%;
     }
     .centroPop_card .close strong, .cras_card .close strong, .creas_card .close strong {
-        font-size: 18.5px;
+        font-size: 21px;
     }
     .content_card {
         width: 100%;
@@ -593,7 +596,7 @@ body > header {
     .content_card header h1 {
         white-space: normal;
         margin: 0;
-        font-size: 21px;
+        font-size: 24px;
     }
     .cras_card header h1 {
         margin-top: 10px;
@@ -602,7 +605,7 @@ body > header {
         margin-top: -10px;
     }
     .content_card p {
-        font-size: 17px;
+        font-size: 19px;
         margin-top: 10px;
         width: 100%;
     }
@@ -611,6 +614,7 @@ body > header {
     }
     .img_card {
         width: 100%;
+        padding: 20px 0 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -640,13 +644,13 @@ body > header {
     }
     .centroPop_card footer h3, .cras_card footer h3, .creas_card footer h3 {
         font-family: 'Lato';
-        font-size: 25px;
+        font-size: 22px;
         position: relative;
         top: 20%;
     }
     .centroPop_card footer p, .cras_card footer p, .creas_card footer p {
         font-family: 'Bree Serif';
-        font-size: 20px;
+        font-size: 17px;
     }
     .centroPop_card footer img, .cras_card footer img, .creas_card footer img {
         float: none;
