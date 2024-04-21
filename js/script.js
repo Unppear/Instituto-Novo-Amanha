@@ -53,14 +53,15 @@ $(window).on('load', function() {
     /*--Centro Pop---*/
     open_centroPop.on('click', () => {
         card_background.fadeIn('500', () => {});
-        card_background.css('display', 'flex').css('height', alturaDoc);
-
-        card_centroPop.fadeIn('500', () => {});
         if($(window).width() < 600) {
+            card_background.css('display', 'flex').css('height', alturaDoc);
             card_centroPop.css('display', 'flex');    
         } else {
+            card_background.css('display', 'flex');
             card_centroPop.css('display', 'grid');
         };
+        card_centroPop.fadeIn('500', () => {});
+        
     });
 
     close_centroPop.on('click', () => {
@@ -71,14 +72,15 @@ $(window).on('load', function() {
     /*--Cras---*/
     open_cras.on('click', () => {
         card_background.fadeIn('500', () => {});
-        card_background.css('display', 'flex').css('height', alturaDoc);
-
-        cras_card.fadeIn('500', () => {});
         if($(window).width() < 600) {
+            card_background.css('display', 'flex').css('height', alturaDoc);
             cras_card.css('display', 'flex');    
         } else {
+            card_background.css('display', 'flex');
             cras_card.css('display', 'grid');
         };
+        cras_card.fadeIn('500', () => {});
+        
     });
 
     close_cras.on('click', () => {
@@ -89,14 +91,15 @@ $(window).on('load', function() {
     /*---Creas---*/
     open_creas.on('click', () => {
         card_background.fadeIn('500', () => {});
-        card_background.css('display', 'flex').css('height', alturaDoc);
-
-        card_creas.fadeIn('500', () => {});
         if($(window).width() < 600) {
+            card_background.css('display', 'flex').css('height', alturaDoc);
             card_creas.css('display', 'flex');    
         } else {
+            card_background.css('display', 'flex');
             card_creas.css('display', 'grid');
         };
+        card_creas.fadeIn('500', () => {});
+        
     });
 
     close_creas.on('click', () => {

@@ -130,7 +130,7 @@ html, body {
     grid-template-areas: 
         'esquerda direita'
         'rodape rodape';
-        grid-template-columns: 77% 23%;
+        grid-template-columns: 73% 27%;
     width: 60%;
     position: relative;
 }
@@ -183,10 +183,10 @@ html, body {
     text-align: center;
     width: 85%;
     font-family: 'Lato';
-    
 }
 .img_card {
     grid-area: direita;
+    position: relative;
 }
 .img_card div {
     position: absolute;
@@ -194,11 +194,11 @@ html, body {
     padding: 10px 10px 50px;
     border-radius: 3px;
     border: 1px solid #a29e9a;
-    width: 11%;
+    width: 65%;
 }
 .img_card div:nth-of-type(1) {
-    top: 21.3%;
-    right: 26.3%;
+    top: 15%;
+    right: 10%;
 }
 .img_card div:nth-of-type(2) {
     top: 39.7%;
@@ -565,16 +565,10 @@ body > header {
     }
     /*---Botao de fechar---*/
     .centroPop_card .close, .cras_card .close, .creas_card .close {
-        top: -17px;
+        top: -1%;
         right: 0;
         left: 50%;
-        transform: translateX(-50%);
-    }
-    .cras_card .close {
-        top: 35.58%;
-    }
-    .creas_card .close {
-        top: 36.9%;
+        transform: translate(-50%, 1%);
     }
     .centroPop_card .close strong, .cras_card .close strong, .creas_card .close strong {
         font-size: 21px;
