@@ -565,10 +565,10 @@ body > header {
     }
     /*---Botao de fechar---*/
     .centroPop_card .close, .cras_card .close, .creas_card .close {
-        top: -1.1%;
+        top: -17px;
         right: 0;
         left: 50%;
-        transform: translate(-50%, 1.1%);
+        transform: translateX(-50%);
     }
     .cras_card .close {
         top: 35.58%;
