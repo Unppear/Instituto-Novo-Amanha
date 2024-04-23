@@ -53,7 +53,7 @@ $(window).on('load', function() {
     /*--Centro Pop---*/
     open_centroPop.on('click', () => {
         card_background.fadeIn('500', () => {});
-        if($(window).width() < 600) {
+        if($(window).width() < 1025) {
             card_background.css('display', 'flex').css('height', alturaDoc);
             card_centroPop.css('display', 'flex');    
         } else {
@@ -72,7 +72,7 @@ $(window).on('load', function() {
     /*--Cras---*/
     open_cras.on('click', () => {
         card_background.fadeIn('500', () => {});
-        if($(window).width() < 600) {
+        if($(window).width() < 1025) {
             card_background.css('display', 'flex').css('height', alturaDoc);
             cras_card.css('display', 'flex');    
         } else {
@@ -91,7 +91,7 @@ $(window).on('load', function() {
     /*---Creas---*/
     open_creas.on('click', () => {
         card_background.fadeIn('500', () => {});
-        if($(window).width() < 600) {
+        if($(window).width() < 1025) {
             card_background.css('display', 'flex').css('height', alturaDoc);
             card_creas.css('display', 'flex');    
         } else {
