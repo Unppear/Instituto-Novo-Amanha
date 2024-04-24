@@ -137,6 +137,9 @@ html, body {
 .cras_card {
     background-image: url('../imgs/background_cras.png');
 }
+.creas_card {
+    background-image: url('../imgs/background_creas.png');
+}
 /*---Botao de fechar---*/
 .centroPop_card .close, .cras_card .close, .creas_card .close {
     top: -1.7%;
@@ -875,10 +878,9 @@ body > header {
         padding: 0 20px;
     }
     .content_card header {
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        flex-wrap: wrap;
         padding: 0;
     }
     .content_card header img {
@@ -1025,35 +1027,33 @@ body > header {
     }
     /*---Serviços---*/
     .services {
-        padding: 60px 20px;
+        padding: 60px 12px;
     }
     .services h1 {
         font-size: 55px;
     }
     .services .content {
         margin-top: 50px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
     .services .single {
-        width: 100%;
-    }
-    .services .single:nth-of-type(2) {
-        margin: 30px 0;
+        width: 32%;
+        padding: 8px;
     }
     .services .single img {
-        width: 35%;
+        width: 70%;
     }
     .services .single h3 {
-        font-size: 25px;
-    }
-    .services .single:nth-of-type(3) h3 {
-        margin-top: -25px;
+        font-size: 20px;
     }
     .services .single p {
-        font-size: 18px;
-        margin-top: -10px;
+        font-size: 16px;
+        margin-top: 5px;
+        white-space: normal;
+    }
+    /*---Container com o link---*/
+    .box_link input {
+        padding: 11px 23px;
+        font-size: 16px;
     }
     /*---Seção Filosofia---*/
     .philosophy {
@@ -1116,6 +1116,15 @@ body > header {
     }
     .left_content .contact_single:not(:nth-of-type(2)) span:first-of-type p, .right_content span:first-of-type p {
         margin-top: 0;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .img_card div {
+        width: 26%;
+        height: 218px;
+    }
+    .img_card img {
+        height: 152px;
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1336px) {
