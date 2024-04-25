@@ -916,7 +916,6 @@ body > header {
     }
     .img_card div {
         position: static;
-        padding: 10px 10px 50px;
         width: 31%;
         margin-top: 10px;
     }
@@ -938,13 +937,9 @@ body > header {
         margin: 10px 0;
     }
     .centroPop_card footer h3, .cras_card footer h3, .creas_card footer h3 {
-        font-family: 'Lato';
         font-size: 24px;
-        position: relative;
-        top: 20%;
     }
     .centroPop_card footer p, .cras_card footer p, .creas_card footer p {
-        font-family: 'Bree Serif';
         font-size: 19px;
     }
     .centroPop_card footer img, .cras_card footer img, .creas_card footer img {
@@ -1131,5 +1126,73 @@ body > header {
     /*---Icone de fechar---*/
     .close {
         right: -1.2%;
+    }
+}
+@media screen and (min-width: 1280px) and (max-width: 1336px) {
+    /*---Botao de fechar---*/
+    .centroPop_card .close, .cras_card .close, .creas_card .close {
+        top: -2.5%;
+        left: 98.5%;
+        transform: translate(0);
+        right: -1.1%;
+    }
+    /*---Cards---*/
+    .background_card {
+        position: fixed;
+    }
+    .centroPop_card, .cras_card, .creas_card {
+        padding: 15px 0;
+        flex-direction: row;
+    }
+    .content_card header {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;   
+        padding: 25px 0 0 25px;
+    }
+    .content_card header img {
+        width: 20%;
+        margin-bottom: 0;
+    }
+    .content_card header h1 {
+        white-space: normal;
+        margin: 25px 0 0 8px;
+        font-size: 26px;
+    }
+    /*---Container das imagens---*/
+    .img_card {
+        width: 100%;
+        padding: 20px 0 10px;
+        display: block;
+    }
+    .img_card div {
+        position: absolute;
+        width: 61%;
+        margin-top: 0;
+    }
+    /*---Rodape dos cards---*/
+    .centroPop_card footer, .cras_card footer, .creas_card footer {
+        padding: 0 15px 15px;
+        text-align: left;
+    }
+    .centroPop_card footer div, .cras_card footer div, .creas_card footer div {
+        width: 50%;
+        position: relative;
+    }
+    .centroPop_card footer div:nth-of-type(1), .cras_card footer div:nth-of-type(1), .creas_card footer div:nth-of-type(1) {
+        margin: 0;
+    }
+    .centroPop_card footer h3, .cras_card footer h3, .creas_card footer h3 {
+        font-size: 25px;
+    }
+    .centroPop_card footer p, .cras_card footer p, .creas_card footer p {
+        font-size: 20px;
+    }
+    .centroPop_card footer img, .cras_card footer img, .creas_card footer img {
+        float: right;
+        position: static;
+        transform: translateX(0);
+        width: 6%;
+        margin: 0;
     }
 }
