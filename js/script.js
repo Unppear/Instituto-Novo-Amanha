@@ -3,7 +3,7 @@
 /*---Função prime---*/
 $(window).on('load', function() {
     /*---Popup---*/ 
-    var popupBackground = $('.background_popup');
+    var popupBackground = $('.background_popup'), contentPopup = $('.content_popup');
 
     $('#open_contact').on('click', function() {
         /*
@@ -14,9 +14,13 @@ $(window).on('load', function() {
         */
         popupBackground.fadeIn('500', () => {});
         popupBackground.css('display', 'flex');
+
+        contentPopup.css('display', 'block');
     });
     $('#close_popup').on('click', () => {
-        popupBackground.fadeOut('500', () => {});
+        popupBackground.fadeOut('500', () => {
+            contentPopup.css('display', 'none');
+        });
     })
     /*---Container escondido---*/
     var singOne = $('.one'), singTwo = $('.two'), singThree = $('.three'), 
@@ -105,5 +109,20 @@ $(window).on('load', function() {
     close_creas.on('click', () => {
         card_background.fadeOut('500', () => {});
         card_creas.fadeOut('500', () => {});
+    });
+
+    /*---Segundo Popup---*/
+    var openPopup2 = $('#open_popup2'), closePopup2 = $('#close_popup2'), backgroundPopup2 = $('.background_popup2');
+
+    openPopup2.on('click', () => {
+        popupBackground.fadeIn('500', () => {});
+        popupBackground.css('display', 'flex');
+        backgroundPopup2.css('display', 'flex');
+    });
+
+    closePopup2.on('click', () => {
+        popupBackground.fadeOut('500', () => {
+            backgroundPopup2.css('display', 'none');
+        });
     });
 });

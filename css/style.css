@@ -25,6 +25,12 @@
 html, body {
     height: -webkit-fill-available;
 }
+/*---Container de centralização---*/
+.center {
+    margin: 0 auto;
+    max-width: 1250px;
+    padding: 0 2%;
+}
 /*---Popup---*/
 .background_popup, .background_card {
     display: none;
@@ -39,6 +45,7 @@ html, body {
 .content_popup {
     background-color: #fafafa;
     width: 30%;
+    display: none;
     position: relative;
     border-radius: 15px;
     padding: 50px;
@@ -93,6 +100,100 @@ html, body {
     font-family: 'DM Sans';
     color: #010101;
 }
+/*---Segundo Popup: fundo---*/
+.background_popup2 {
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 50px;
+    display: none;
+    position: relative;
+    justify-content: center;
+    width: 70%;
+}
+/*---Segundo Popup: botão de fechar---*/
+.background_popup2 .close {
+    top: 3.5%;   
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+    transform: translateX(-50%);
+    background-color: #797BE4;
+    border-color: #797BE4;
+}
+.background_popup2 .close:hover {
+    transform: translateX(-50%) scale(1.1);
+    background-color: #fafafa;
+    color: #797BE4;
+}
+.background_popup2 .close strong {
+    font-size: 20px;
+}
+/*---Segundo Popup---*/
+.circle {
+    background-color: #fafafa;
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    border-radius: 45px;
+}
+.circle:nth-of-type(1) {
+    top: -2%;
+    left: -4%;
+}
+.circle:nth-of-type(2) {
+    left: 93.5%;
+    top: -2%;
+}
+.circle:nth-of-type(3) {
+    left: -4%;
+    top: 93.5%;
+}
+.circle:nth-of-type(4) {
+    left: 93.5%;
+    top: 93.5%;
+}  
+.content_popup2 {
+    background-color: #94ff96;
+    width: 70%;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+/*---Segundo Popup: cabeçalho---*/
+.content_popup2 header img {
+    width: 25%;
+}
+.content_popup2 header h1 {
+    font-size: 35px;
+    font-family: 'Lato';
+}
+/*---*/
+.content_popup2 > p {
+    margin: 30px 0;
+    font-family: 'Lato';
+    font-size: 25px;
+}
+/*---Segundo Popup: rodapé---*/
+.content_popup2 footer {
+    margin: 0 auto;
+    width: 40%;
+}
+.content_popup2 footer span {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+.content_popup2 footer h4 {
+    font-family: 'Lato';
+    font-size: 15px;
+    color: #797BE4;
+}
+.content_popup2 footer p {
+    font-family: 'DM Sans';
+    font-size: 20px;
+}
 /*---Icone de fechar---*/
 .close {
     position: absolute;
@@ -121,7 +222,7 @@ html, body {
     font-family: 'Nunito';
 }
 /*---Cards---*/
-.centroPop_card, .cras_card, .creas_card {
+.centroPop_card, .cras_card, .creas_card, .vozesDasRuas {
     background-image: url('../imgs/backgroundCard_centroPop.png');
     background-size: cover;
     background-position: center;
@@ -130,7 +231,7 @@ html, body {
     grid-template-areas: 
         'esquerda direita'
         'rodape rodape';
-        grid-template-columns: 73% 27%;
+    grid-template-columns: 73% 27%;
     width: 60%;
     position: relative;
 }
@@ -150,7 +251,7 @@ html, body {
 .centroPop_card .close strong, .cras_card .close strong, .creas_card .close strong {
     font-size: 18.5px;
 }
-.content_card {
+.content_card, .content_vdr {
     grid-area: esquerda;
 }
 .content_card header {
@@ -181,11 +282,11 @@ html, body {
     width: 85%;
     font-family: 'Lato';
 }
-.img_card {
+.img_card, .img_vdr {
     grid-area: direita;
     position: relative;
 }
-.img_card div {
+.img_card div, .img_vdr div {
     position: absolute;
     background-color: #f2f1eb;
     padding: 10px 10px 50px;
@@ -193,26 +294,26 @@ html, body {
     border: 1px solid #a29e9a;
     width: 65%;
 }
-.img_card div:nth-of-type(1) {
+.img_card div:nth-of-type(1), .img_vdr div:nth-of-type(1) {
     top: 13%;
     right: 36%;
 }
-.img_card div:nth-of-type(2) {
+.img_card div:nth-of-type(2), .img_vdr div:nth-of-type(2) {
     top: 51%;
     right: 7%;
 }
-.img_card div:nth-of-type(3) {
+.img_card div:nth-of-type(3), .img_vdr div:nth-of-type(3) {
     top: 92%;
     right: 35%;
 }
-.img_card img {
+.img_card img, .img_vdr img {
     width: 100%;
     border: 0.5px solid #dfe2de;
     border-radius: 3px;
     height: 160px;
 }
 /*---Rodape do card centro pop---*/
-.centroPop_card footer, .cras_card footer, .creas_card footer {
+.centroPop_card footer, .cras_card footer, .creas_card footer, .vozesDasRuas footer {
     padding: 0 15px 15px;
     grid-area: rodape;
 }
@@ -437,6 +538,121 @@ body > header {
     width: 100%;
     height: 100%;
     border-radius: 5px;
+}
+/*---Vozes das Ruas---*/
+.vozesDasRuas {
+    background-image: url('../imgs/vozesDasRuas_background.png');
+    height: -webkit-fill-available;
+    width: 100%;
+    display: block;
+}
+/*---Vozes das Ruas: container de centralização---*/
+.vozesDasRuas .center {
+    max-width: 1700px;
+    padding: 1% 0;
+    display: grid;
+    grid-template-areas: 
+        'esquerda direita'
+        'rodape rodape'
+    ;
+    grid-template-columns: 70% 30%;
+}
+/*---Vozes das Ruas: cabeçalho---*/
+.vozesDasRuas header {
+    display: flex;
+    align-items: center;
+}
+.vozesDasRuas header img {
+    width: 10%;
+}
+.vozesDasRuas header h1 {
+    font-family: 'Lato';
+    margin-left: 25px;
+    font-size: 35px;
+}
+/*---Vozes das Ruas: conteudo---*/
+.content_vdr p {
+    font-family: 'Lato';
+    font-size: 32px;
+    text-align: center;
+    margin: 150px 0;
+    width: 62%;
+}
+/*---Vozes das Ruas: container das imagens---*/
+.img_vdr div {
+    width: 60%;
+}
+.img_vdr div:nth-of-type(1) {
+    top: 2%;
+}
+.img_vdr div:nth-of-type(2) {
+    top: 34%;
+} 
+.img_vdr div:nth-of-type(3) {
+    top: 71%;
+}
+.img_vdr img {
+    height: 284px;
+}
+/*---Vozes das Ruas: rodapé---*/
+.vozesDasRuas footer {
+    padding: 40px 0 0;
+    justify-content: space-between;
+    display: flex;
+}
+.vozesDasRuas .one, .vozesDasRuas .two {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+.vozesDasRuas .one button {
+    height: 55px;
+    width: 25%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.7s;
+    color: #010101;
+    background-color: #baebbf;
+    border: 0;
+}
+.vozesDasRuas .one button:hover, .vozesDasRuas .one button:active {
+    transform: scale(1.05);
+    background-color: #fafafa;
+    color: #42E245;
+}
+.vozesDasRuas .one img {
+    margin: 0 30px;
+}
+.vozesDasRuas .one p {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Lato';
+}
+.vozesDasRuas footer img {
+    width: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+}
+.vozesDasRuas .two span, .vozesDasRuas .two a {
+    display: inline-block;
+}
+.vozesDasRuas .two span:nth-of-type(1) {
+    margin-right: 10px;
+}
+.vozesDasRuas .two a {
+    text-decoration: none;
+    color: #010101;
+    margin-left: 5px;
+    font-size: 16px;
+    transition: 0.5s;
+    font-family: 'Lato';
+}
+.vozesDasRuas .two a:hover, .vozesDasRuas .two a:active {
+    transform: scale(1.03);
+    text-decoration: underline;
 }
 /*---Feedback---*/
 .feedback {
@@ -900,7 +1116,7 @@ body > header {
     }
     .content_card p {
         font-size: 20px;
-        margin-top: 10px;
+        margin-top: 20px;
         width: 100%;
     }
     .content_card p br {
@@ -1156,7 +1372,7 @@ body > header {
     }
     .content_card header h1 {
         white-space: normal;
-        margin: 25px 0 0 8px;
+        margin: 25px 0 0 15px;
         font-size: 26px;
     }
     /*---Container das imagens---*/
@@ -1194,5 +1410,70 @@ body > header {
         transform: translateX(0);
         width: 6%;
         margin: 0;
+    }
+}
+/*---Responsivo: desktop---*/
+@media screen and (width: 1440px) {
+    .content_card header {
+        padding: 25px 0 0 15px;
+    }
+    .content_card header img {
+        width: 25%;
+    }
+    .content_card header h1 {
+        font-size: 26px;
+        white-space: normal;
+        margin-top: 30px;
+    }
+    .cras_card header h1, .creas_card header h1 {
+        margin-top: 44px;
+    }
+    .content_card p {
+        font-size: 20px;
+        width: 100%;
+    }
+    .img_card div {
+        width: 70%;
+    }
+    .img_card img {
+        height: 140px;
+    }
+    .centroPop_card footer h3, .cras_card footer h3, .creas_card footer h3 {
+        font-size: 22px;
+    }
+    .centroPop_card footer p, .cras_card footer p, .creas_card footer p {
+        font-size: 18px;
+    }
+    .centroPop_card footer img, .cras_card footer img, .creas_card footer img  {
+        width: 7%;
+    } 
+    .aboutUs .info {
+        padding-top: 45px;
+        padding-left: 160px;
+    }
+    .top a {
+        width: 15%;
+    }
+    .top h1 {
+        font-size: 35px;
+    }
+    .bottom h1 {
+        font-size: 65px;
+    }
+    .bottom h2 {
+        font-size: 25px;
+    }
+    .info h1 {
+        font-size: 45px;
+    }
+    .aboutUs .info p {
+        font-size: 19px;
+        margin-top: -15px;
+    }
+    .info input, .box_link input {
+        padding: 13px 25px;
+    }
+    .philosophy .info a {
+        padding: 14px 40px;
     }
 }
