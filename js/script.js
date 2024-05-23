@@ -112,17 +112,17 @@ $(window).on('load', function() {
     });
 
     /*---Segundo Popup---*/
-    var openPopup2 = $('#open_popup2'), closePopup2 = $('#close_popup2'), backgroundPopup2 = $('.background_popup2');
+    var openPopup2 = $('#open_popup2'), closePopup2 = $('#close_popup2'), popup2Cont = $('.popup2_cont');
 
     openPopup2.on('click', () => {
         popupBackground.fadeIn('500', () => {});
         popupBackground.css('display', 'flex');
-        backgroundPopup2.css('display', 'flex');
+        popup2Cont.css('display', 'flex');
     });
 
     closePopup2.on('click', () => {
         popupBackground.fadeOut('500', () => {
-            backgroundPopup2.css('display', 'none');
+            popup2Cont.css('display', 'none');
         });
     });
 });

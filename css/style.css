@@ -25,8 +25,8 @@
 html, body {
     height: -webkit-fill-available;
 }
-/*---Container de centralização---*/
-.center {
+/*---Container para ajustes---*/
+.settings {
     margin: 0 auto;
     max-width: 1250px;
     padding: 0 2%;
@@ -100,19 +100,15 @@ html, body {
     font-family: 'DM Sans';
     color: #010101;
 }
-/*---Segundo Popup: fundo---*/
-.background_popup2 {
-    background-color: #fafafa;
-    border-radius: 5px;
-    padding: 50px;
+/*---Segundo Popup: container---*/
+.popup2_cont {
     display: none;
-    position: relative;
     justify-content: center;
-    width: 70%;
+    position: relative;
 }
 /*---Segundo Popup: botão de fechar---*/
-.background_popup2 .close {
-    top: 3.5%;   
+.popup2_cont .close {
+    top: 12.5%;   
     left: 50%;
     width: 40px;
     height: 40px;
@@ -121,78 +117,17 @@ html, body {
     background-color: #797BE4;
     border-color: #797BE4;
 }
-.background_popup2 .close:hover {
+.popup2_cont .close:hover {
     transform: translateX(-50%) scale(1.1);
     background-color: #fafafa;
     color: #797BE4;
 }
-.background_popup2 .close strong {
+.popup2_cont .close strong {
     font-size: 20px;
 }
-/*---Segundo Popup---*/
-.circle {
-    background-color: #fafafa;
-    height: 90px;
-    width: 90px;
-    position: absolute;
-    border-radius: 45px;
-}
-.circle:nth-of-type(1) {
-    top: -2%;
-    left: -4%;
-}
-.circle:nth-of-type(2) {
-    left: 93.5%;
-    top: -2%;
-}
-.circle:nth-of-type(3) {
-    left: -4%;
-    top: 93.5%;
-}
-.circle:nth-of-type(4) {
-    left: 93.5%;
-    top: 93.5%;
-}  
-.content_popup2 {
-    background-color: #94ff96;
-    width: 70%;
-    position: relative;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-/*---Segundo Popup: cabeçalho---*/
-.content_popup2 header img {
-    width: 25%;
-}
-.content_popup2 header h1 {
-    font-size: 35px;
-    font-family: 'Lato';
-}
-/*---*/
-.content_popup2 > p {
-    margin: 30px 0;
-    font-family: 'Lato';
-    font-size: 25px;
-}
-/*---Segundo Popup: rodapé---*/
-.content_popup2 footer {
-    margin: 0 auto;
-    width: 40%;
-}
-.content_popup2 footer span {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-}
-.content_popup2 footer h4 {
-    font-family: 'Lato';
-    font-size: 15px;
-    color: #797BE4;
-}
-.content_popup2 footer p {
-    font-family: 'DM Sans';
-    font-size: 20px;
+/*---Segundo Popup: imagem---*/
+.popup2_cont img {
+    width: 98%;
 }
 /*---Icone de fechar---*/
 .close {
@@ -222,7 +157,7 @@ html, body {
     font-family: 'Nunito';
 }
 /*---Cards---*/
-.centroPop_card, .cras_card, .creas_card, .vozesDasRuas {
+.centroPop_card, .cras_card, .creas_card, .vozesDasRuas, .todosPorUm_cont {
     background-image: url('../imgs/backgroundCard_centroPop.png');
     background-size: cover;
     background-position: center;
@@ -251,7 +186,7 @@ html, body {
 .centroPop_card .close strong, .cras_card .close strong, .creas_card .close strong {
     font-size: 18.5px;
 }
-.content_card, .content_vdr {
+.content_card, .content_vdr, .tpu_content {
     grid-area: esquerda;
 }
 .content_card header {
@@ -282,11 +217,11 @@ html, body {
     width: 85%;
     font-family: 'Lato';
 }
-.img_card, .img_vdr {
+.img_card, .img_vdr, .tpu_img {
     grid-area: direita;
     position: relative;
 }
-.img_card div, .img_vdr div {
+.img_card div, .img_vdr div, .tpu_img div {
     position: absolute;
     background-color: #f2f1eb;
     padding: 10px 10px 50px;
@@ -306,14 +241,14 @@ html, body {
     top: 92%;
     right: 35%;
 }
-.img_card img, .img_vdr img {
+.img_card img, .img_vdr img, .tpu_img img {
     width: 100%;
     border: 0.5px solid #dfe2de;
     border-radius: 3px;
     height: 160px;
 }
 /*---Rodape do card centro pop---*/
-.centroPop_card footer, .cras_card footer, .creas_card footer, .vozesDasRuas footer {
+.centroPop_card footer, .cras_card footer, .creas_card footer, .vozesDasRuas footer, .todosPorUm_cont footer {
     padding: 0 15px 15px;
     grid-area: rodape;
 }
@@ -540,14 +475,15 @@ body > header {
     border-radius: 5px;
 }
 /*---Vozes das Ruas---*/
-.vozesDasRuas {
+.vozesDasRuas, .todosPorUm_cont {
     background-image: url('../imgs/vozesDasRuas_background.png');
     height: -webkit-fill-available;
     width: 100%;
+    border-radius: 0;
     display: block;
 }
-/*---Vozes das Ruas: container de centralização---*/
-.vozesDasRuas .center {
+/*---Vozes das Ruas: container para ajustes---*/
+.vozesDasRuas .settings, .todosPorUm_cont .settings {
     max-width: 1700px;
     padding: 1% 0;
     display: grid;
@@ -558,20 +494,20 @@ body > header {
     grid-template-columns: 70% 30%;
 }
 /*---Vozes das Ruas: cabeçalho---*/
-.vozesDasRuas header {
+.vozesDasRuas header, .todosPorUm_cont header {
     display: flex;
     align-items: center;
 }
-.vozesDasRuas header img {
+.vozesDasRuas header img, .todosPorUm_cont header img {
     width: 10%;
 }
-.vozesDasRuas header h1 {
+.vozesDasRuas header h1, .todosPorUm_cont header h1 {
     font-family: 'Lato';
     margin-left: 25px;
     font-size: 35px;
 }
 /*---Vozes das Ruas: conteudo---*/
-.content_vdr p {
+.content_vdr p, .tpu_content p {
     font-family: 'Lato';
     font-size: 32px;
     text-align: center;
@@ -579,28 +515,28 @@ body > header {
     width: 62%;
 }
 /*---Vozes das Ruas: container das imagens---*/
-.img_vdr div {
+.img_vdr div, .tpu_img div {
     width: 60%;
 }
-.img_vdr div:nth-of-type(1) {
+.img_vdr div:nth-of-type(1), .tpu_img div:nth-of-type(1) {
     top: 2%;
 }
-.img_vdr div:nth-of-type(2) {
+.img_vdr div:nth-of-type(2), .tpu_img div:nth-of-type(2) {
     top: 34%;
 } 
-.img_vdr div:nth-of-type(3) {
+.img_vdr div:nth-of-type(3), .tpu_img div:nth-of-type(3) {
     top: 71%;
 }
-.img_vdr img {
+.img_vdr img, .tpu_img img {
     height: 284px;
 }
 /*---Vozes das Ruas: rodapé---*/
-.vozesDasRuas footer {
+.vozesDasRuas footer, .todosPorUm_cont footer {
     padding: 40px 0 0;
     justify-content: space-between;
     display: flex;
 }
-.vozesDasRuas .one, .vozesDasRuas .two {
+.vozesDasRuas .one, .vozesDasRuas .two, .todosPorUm_cont .one, .todosPorUm_cont .two {
     display: flex;
     width: 50%;
     align-items: center;
@@ -625,24 +561,24 @@ body > header {
 .vozesDasRuas .one img {
     margin: 0 30px;
 }
-.vozesDasRuas .one p {
+.vozesDasRuas .one p, .todosPorUm_cont .one p {
     font-size: 20px;
     text-align: center;
     font-family: 'Lato';
 }
-.vozesDasRuas footer img {
+.vozesDasRuas footer img, .todosPorUm_cont footer img {
     width: 60px;
     display: inline-block;
     vertical-align: middle;
     height: 60px;
 }
-.vozesDasRuas .two span, .vozesDasRuas .two a {
+.vozesDasRuas .two span, .vozesDasRuas .two a, .todosPorUm_cont .two span, .todosPorUm_cont .two a {
     display: inline-block;
 }
 .vozesDasRuas .two span:nth-of-type(1) {
     margin-right: 10px;
 }
-.vozesDasRuas .two a {
+.vozesDasRuas .two a, .todosPorUm_cont .two a {
     text-decoration: none;
     color: #010101;
     margin-left: 5px;
@@ -650,9 +586,71 @@ body > header {
     transition: 0.5s;
     font-family: 'Lato';
 }
-.vozesDasRuas .two a:hover, .vozesDasRuas .two a:active {
+.vozesDasRuas .two a:hover, .vozesDasRuas .two a:active, .todosPorUm_cont .one a:hover, .todosPorUm_cont .one a:active {
     transform: scale(1.03);
     text-decoration: underline;
+}
+/*---Todos Por Um---*/
+.todosPorUm_cont {
+    background-image: url('../imgs/todosPorUm_background.png');
+}
+/*---Todos Por Um: cabeçalho---*/
+.tpu_content header div {
+    margin-left: 25px;
+}
+.todosPorUm_cont header h1 {
+    margin-left: 0;
+}
+.tpu_content header h3 {
+    font-size: 20px;
+    margin-top: 5px;
+    font-family: 'Lato';
+}
+/*---Todos Por Um: paragrafo principal---*/
+.tpu_content p {
+    font-size: 30px;
+    width: 72%;
+    margin-bottom: 170px;
+}
+/*---Todos Por Um: container das imagens---*/
+.tpu_img div:nth-of-type(3), .tpu_img div:nth-of-type(1) {
+    left: 21%;
+}
+/*---Todos Por Um: rodape---*/
+.todosPorUm_cont footer {
+    padding: 0;
+}
+.todosPorUm_cont .one {
+    justify-content: space-evenly;
+}
+.todosPorUm_cont .one span a {
+    font-size: 16px;
+    margin-left: 5px;
+    transition: 0.7s;
+    vertical-align: middle;
+    display: inline-block;
+    color: #010101;
+    font-family: 'Lato';
+    text-decoration: none;
+} 
+.todosPorUm_cont .one p img {
+    margin: 10px 0;
+}
+.todosPorUm_cont .one p a {
+    text-decoration: none;
+    color: #010101;
+    display: inline-block;
+    transition: 0.7s;
+}
+.todosPorUm_cont .two p {
+    margin-left: 20px;
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 18px;
+}
+.todosPorUm_cont footer > img {
+    width: 70px;
+    height: 70px;
 }
 /*---Feedback---*/
 .feedback {
@@ -662,13 +660,12 @@ body > header {
     padding-left: 150px;
     background-image: url('../imgs/11.png');
     background-size: cover;
-    height: -webkit-fill-available;
+    height: max-content;
 }
 /*---Conteudo---*/
 .feedback .content {
     width: 50%;
-    padding-top: 160px;
-    height: 100%;
+    padding: 40px 0;
 }
 .feedback h1 {
     white-space: pre-line;
@@ -676,13 +673,9 @@ body > header {
     margin-top: -100px;
     font-family: 'Lato';
 }
-/*---Individual---*/
-.feedback .single {
-    height: calc(100% / 3);
-}
-.feedback h2 {
+.feedback p {
     font-family: 'DM Sans';
-    font-size: 22px;
+    font-size: 30px;
 }
 /*---Contato---*/
 .contact {
@@ -766,6 +759,9 @@ body > header {
     .background_popup .close {
         top: -9%;
         right: -4%;
+    }
+    .popup2_cont .close {
+        top: -4%;
     }
     /*---Cards---*/
     .background_card {
@@ -1002,6 +998,91 @@ body > header {
         font-size: 16px;
         padding: 12px 32px;
     }
+    /*---Vozes das Ruas---*/
+    .vozesDasRuas, .todosPorUm_cont {
+        height: max-content;
+    }
+    /*---Vozes das Ruas: container para ajustes---*/
+    .vozesDasRuas .settings, .todosPorUm_cont .settings {
+        max-width: 100%;
+        padding: 4%;
+        grid-template-areas: 
+            'esquerda'
+            'direita'
+            'rodape'
+        ;
+        grid-template-columns: 100%;
+    }
+    /*---Vozes das Ruas: cabeçalho---*/
+    .vozesDasRuas header, .todosPorUm_cont header {
+        justify-content: center;
+    }
+    .vozesDasRuas header img, .todosPorUm_cont header img {
+        width: 15%;
+    }
+    .vozesDasRuas header h1, .todosPorUm_cont header h1 {
+        margin-left: 12px;
+        font-size: 32px;
+    }
+    .todosPorUm_cont header h1 {
+        margin-left: 0;
+    }
+    .tpu_content header div {
+        margin-left: 12px;
+    }
+    .tpu_content header h3 {
+        font-size: 18px;
+    }
+    .tpu_content header h3 br {
+        display: none;
+    }
+    /*---Vozes das Ruas: conteudo---*/
+    .content_vdr p, .tpu_content p {
+        font-size: 22px;
+        margin: 20px 0 0;
+        width: 100%;
+    }
+    .content_vdr p > br, .tpu_content p > br {
+        display: none;
+    }
+    /*---Container de Imagens---*/
+    .img_vdr, .tpu_img {
+        padding-top: 20px;
+    }
+    .img_vdr div, .tpu_img div {
+        position: static;
+        width: 100%;
+    }
+    .img_vdr div:nth-of-type(2), .tpu_img div:nth-of-type(2) {
+        margin: 20px 0;
+    }
+    /*---Vozes das Ruas: rodapé---*/
+    .vozesDasRuas footer, .todosPorUm_cont footer {
+        justify-content: normal;
+        flex-direction: column;
+    }
+    .todosPorUm_cont footer {
+        padding-top: 40px;
+    }
+    .vozesDasRuas .one, .vozesDasRuas .two, .todosPorUm_cont .one, .todosPorUm_cont .two {
+        width: 100%;
+        flex-direction: column;
+    }
+    .vozesDasRuas .one button {
+        width: 70%;
+    }
+    .vozesDasRuas .one img {
+        margin: 0;
+    }
+    .vozesDasRuas .one button, .vozesDasRuas .one img, .vozesDasRuas .one p, .todosPorUm_cont .one p, .todosPorUm_cont .one span, .todosPorUm_cont .two img, .todosPorUm_cont .two p {
+        margin-bottom: 15px;
+    }
+    .vozesDasRuas .two span {
+        margin: 0 0 15px;
+    }
+    .vozesDasRuas footer > img, .todosPorUm_cont footer > img {
+        align-self: center;
+    }
     /*---Feedback---*/
     .feedback {
         justify-content: normal;
@@ -1014,7 +1095,13 @@ body > header {
     }
     .feedback .content {
         width: 100%;
-        padding-top: 100px;
+        padding-top: 28px;
+    }
+    .feedback p {
+        font-size: 25px;
+    }
+    .feedback p > br {
+        display: none;
     }
     .feedback h2 {
         font-size: 20px;
@@ -1068,6 +1155,9 @@ body > header {
     .close {
         top: -7%;
         right: -2%;
+    }
+    .popup2_cont .close {
+        top: -2.5%;
     }
     /*---Cards---*/
     .background_card {
@@ -1287,6 +1377,110 @@ body > header {
         font-size: 16px;
         padding: 12px 45px;
     }
+    /*---Vozes das Ruas---*/
+    .vozesDasRuas, .todosPorUm_cont {
+        height: max-content;
+    }
+    /*---Vozes das Ruas: container para ajustes---*/
+    .vozesDasRuas .settings, .todosPorUm_cont .settings {
+        max-width: 100%;
+        padding: 4%;
+        grid-template-areas: 
+            'esquerda'
+            'direita'
+            'rodape'
+        ;
+        grid-template-columns: 100%;
+    }
+    /*---Vozes das Ruas: cabeçalho---*/
+    .vozesDasRuas header, .todosPorUm_cont header {
+        justify-content: center;
+    }
+    .vozesDasRuas header img, .todosPorUm_cont header img {
+        width: 11%;
+    }
+    .vozesDasRuas header h1, .todosPorUm_cont header h1 {
+        margin-left: 12px;
+        font-size: 32px;
+    }
+    .todosPorUm_cont header h1 {
+        margin-left: 0;
+    }
+    .tpu_content header div {
+        margin-left: 12px;
+    }
+    .tpu_content header h3 {
+        font-size: 18px;
+    }
+    .tpu_content header h3 br {
+        display: none;
+    }
+    /*---Vozes das Ruas: conteudo---*/
+    .content_vdr p, .tpu_content p {
+        font-size: 22px;
+        margin: 20px 0 0;
+        width: 100%;
+    }
+    .content_vdr p > br, .tpu_content p > br {
+        display: none;
+    }
+    /*---Container de Imagens---*/
+    .img_vdr, .tpu_img {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .img_vdr div, .tpu_img div {
+        position: static;
+        width: 100%;
+    }
+    .img_vdr div:nth-of-type(2), .tpu_img div:nth-of-type(2) {
+        margin: 0 15px;
+    }
+    .img_vdr img, .tpu_img img {
+        height: max-content;
+    }
+    /*---Vozes das Ruas: rodapé---*/
+    .vozesDasRuas footer, .todosPorUm_cont footer {
+        display: block;
+    }
+    .todosPorUm_cont footer {
+        padding-top: 40px;
+    }
+    .vozesDasRuas .one, .vozesDasRuas .two, .todosPorUm_cont .one, .todosPorUm_cont .two {
+        width: 50%;
+        flex-direction: column;
+    }
+    .vozesDasRuas .one, .todosPorUm_cont .one {
+        float: left;
+    }
+    .vozesDasRuas .two, .todosPorUm_cont .two {
+        float: right;
+    }
+    .vozesDasRuas .one button {
+        width: 70%;
+    }
+    .vozesDasRuas .one img {
+        margin: 0;
+    }
+    .vozesDasRuas .one button, .vozesDasRuas .one img, .vozesDasRuas .one p, .todosPorUm_cont .one p, .todosPorUm_cont .two img {
+        margin-bottom: 15px;
+    }
+    .todosPorUm_cont .one span {
+        margin-bottom: 15px;
+    }
+    .todosPorUm_cont .two p {
+        margin: 0;
+    }
+    .vozesDasRuas .two span:nth-of-type(1) {
+        margin: 0 0 15px;
+    }
+    .vozesDasRuas footer > img, .todosPorUm_cont footer > img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     /*---Feedback---*/
     .feedback {
         justify-content: normal;
@@ -1301,8 +1495,8 @@ body > header {
         width: 100%;
         padding-top: 80px;
     }
-    .feedback h2 {
-        font-size: 25px;
+    .feedback p > br {
+        display: none;
     }
     /*---Contato---*/
     .contact {
