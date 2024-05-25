@@ -108,7 +108,7 @@ html, body {
 }
 /*---Segundo Popup: botão de fechar---*/
 .popup2_cont .close {
-    top: 12.5%;   
+    top: -2.5%;   
     left: 50%;
     width: 40px;
     height: 40px;
@@ -127,7 +127,7 @@ html, body {
 }
 /*---Segundo Popup: imagem---*/
 .popup2_cont img {
-    width: 98%;
+    width: 100%;
 }
 /*---Icone de fechar---*/
 .close {
@@ -477,7 +477,7 @@ body > header {
 /*---Vozes das Ruas---*/
 .vozesDasRuas, .todosPorUm_cont {
     background-image: url('../imgs/vozesDasRuas_background.png');
-    height: -webkit-fill-available;
+    height: max-content;
     width: 100%;
     border-radius: 0;
     display: block;
@@ -1669,5 +1669,37 @@ body > header {
     }
     .philosophy .info a {
         padding: 14px 40px;
+    }
+    /*---Vozes das Ruas: container para ajustes---*/
+    .vozesDasRuas .settings, .todosPorUm_cont .settings {
+        padding: 1.5%;  
+    }
+    /*---Vozes das Ruas: conteudo---*/
+    .content_vdr p, .tpu_content p {
+        width: 87%;
+        font-size: 28px;
+    }
+    /*---Vozes das Ruas: container das imagens---*/
+    .img_vdr div:nth-of-type(3) {
+        top: 62%;
+    }
+    .tpu_img div:nth-of-type(3) {
+        top: 59%;
+    }
+    /*---Feedback---*/
+    .feedback {
+        justify-content: space-around;
+        padding-left: 0;
+    }
+    /*---Conteudo---*/
+    .feedback .content {
+        padding: 40px 0;
+        width: 45%;
+    }
+    .feedback h1 {
+        font-size: 53px;
+    }
+    .feedback p {
+        font-size: 28px;
     }
 }
